@@ -177,6 +177,8 @@ the published site.
      and stays hidden until you add a real handle (or delete the row).
    - `location`: set to Kampala, Uganda.
    - `email`: currently the address on your account.
+   - `phone`: your number for calls and WhatsApp; it adds a Call row, a
+     WhatsApp row and a footer link.
 3. **`index.html`**
    - The **Toolkit** levels (`Core` / `Working` / `Learning`) are my
      conservative guesses. Adjust them to what's true.

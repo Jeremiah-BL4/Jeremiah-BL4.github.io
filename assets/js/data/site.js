@@ -27,6 +27,12 @@ export const site = {
      dedicated contact address. */
   email: 'jeremiahanthony876@gmail.com',
 
+  /* For calls and WhatsApp. `phone` is the full international number with no
+     spaces (it builds the tel: and wa.me links); `phoneDisplay` is how it reads
+     on the page. Set phone to PLACEHOLDER to hide both rows. */
+  phone: '+256764440257',
+  phoneDisplay: '+256 764 440 257',
+
   /* Shown as "Based in" in the contact section. Set to PLACEHOLDER to hide it. */
   location: 'Kampala, Uganda',
 
