@@ -30,6 +30,16 @@ Client sites live under the same address, each from its own repo:
 | Site | Address | Repo |
 |---|---|---|
 | Roast & Simmer | https://jeremiah-bl4.github.io/roast-and-simmer/ | `Jeremiah-BL4/roast-and-simmer` (served from its `gh-pages` branch) |
+| Sol Restaurant | https://jeremiah-bl4.github.io/sol-restaurant/ | built from the private `Jeremiah-BL4/sol-restaurant` into this repo's `sol-restaurant/` folder |
+
+**Sol is a demo copy, not the restaurant's launched site.** Its source stays
+private; only the built files live here, with a `noindex` tag and without the
+guest-photo feature (that needs Sol's Node server). To update it after a change
+to Sol, run this in the Sol project, then commit and push this repo:
+
+```bash
+npm run build:portfolio -- "C:/Users/User/Documents/Portfolio website/sol-restaurant"
+```
 
 Any repo you publish with GitHub Pages appears at
 `jeremiah-bl4.github.io/<repo-name>/`, so every client site you host this way

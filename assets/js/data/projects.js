@@ -177,7 +177,7 @@ export const projects = [
     summary:
       'A five-page site for an open-air kitchen and bar in Kololo, Kampala, with the full menu and a way for guests to send in their own photographs.',
     year: '2026',
-    status: 'in-progress',
+    status: 'preview',
     role: 'Design & build',
     tech: ['React', 'TypeScript', 'Vite', 'Node.js', 'Express'],
     features: [
@@ -187,6 +187,9 @@ export const projects = [
       'Gallery built from the restaurant’s own photographs, filterable by category',
       'Every fact on the site comes from their Google listing, menu or Instagram',
     ],
+    // A demo copy of the site, built from the private repo and hosted inside
+    // this portfolio (see README: "Publishing").
+    liveUrl: 'https://jeremiah-bl4.github.io/sol-restaurant/',
     cover: {
       src: 'assets/img/projects/sol-restaurant/desktop.webp',
       alt: 'Sol Restaurant homepage: the covered terrace and garden, with the headline Steak, smoke and a garden to sit in',
@@ -220,7 +223,7 @@ export const projects = [
       built:
         'A React and TypeScript site built with Vite, plus a small Node service for guest photo submissions. Submitted photographs wait in a queue and only appear once the restaurant approves them. The menu is transcribed from the printed placemat, and every gallery photograph is categorised by hand with written alt text.',
       result:
-        'In progress and not public yet. The photo service needs a host that can run a server, not just static files.',
+        'Running as a preview inside this portfolio, kept out of search results. The guest-photo feature needs its own server, so the preview leaves it out; the other four pages are complete.',
     },
   },
 
