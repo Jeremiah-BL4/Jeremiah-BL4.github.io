@@ -2,10 +2,15 @@ import { qs, esc, escUrl } from '../lib/dom.js';
 
 /**
  * Full-screen image viewer. Built rather than imported because the whole
- * feature is ~80 lines and a library would cost more than it saves.
+ * feature is ~100 lines and a library would cost more than it saves.
  *
  * Handles: focus return, Escape, arrow-key paging, background scroll lock.
+ * An item with `video` plays that file (looped, muted, with controls) instead
+ * of showing its image; it doesn't start by itself for visitors who ask for
+ * reduced motion.
  */
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
 export function createLightbox() {
   let items = [];
   let index = 0;
@@ -22,10 +27,12 @@ export function createLightbox() {
     <button type="button" class="lightbox__nav lightbox__nav--prev" aria-label="Previous image">‹</button>
     <button type="button" class="lightbox__nav lightbox__nav--next" aria-label="Next image">›</button>
     <img alt="">
+    <video loop muted playsinline controls preload="none" hidden></video>
     <p class="lightbox__cap"></p>`;
   document.body.appendChild(node);
 
   const img = qs('img', node);
+  const video = qs('video', node);
   const cap = qs('.lightbox__cap', node);
   const closeBtn = qs('.lightbox__close', node);
   const prevBtn = qs('.lightbox__nav--prev', node);
@@ -34,8 +41,19 @@ export function createLightbox() {
   const show = (i) => {
     index = (i + items.length) % items.length;
     const item = items[index];
-    img.src = escUrl(item.src);
-    img.alt = item.alt || item.title || '';
+    video.pause();
+    img.hidden = Boolean(item.video);
+    video.hidden = !item.video;
+    if (item.video) {
+      video.poster = escUrl(item.src);
+      video.src = escUrl(item.video);
+      video.setAttribute('aria-label', item.alt || item.title || '');
+      if (!reducedMotion.matches) video.play().catch(() => {});
+    } else {
+      video.removeAttribute('src');
+      img.src = escUrl(item.src);
+      img.alt = item.alt || item.title || '';
+    }
     /* Gallery renders have title + meta; case-study screenshots have caption. */
     const text = item.title
       ? `<strong>${esc(item.title)}</strong>${item.meta ? ` · ${esc(item.meta)}` : ''}`
@@ -50,6 +68,7 @@ export function createLightbox() {
   };
 
   const close = () => {
+    video.pause();
     node.hidden = true;
     document.body.style.overflow = '';
     document.removeEventListener('keydown', onKey);
@@ -62,7 +81,7 @@ export function createLightbox() {
     if (event.key === 'ArrowLeft') show(index - 1);
     /* Keep focus inside the dialog while it is open. */
     if (event.key === 'Tab') {
-      const focusable = [closeBtn, prevBtn, nextBtn].filter((b) => !b.hidden);
+      const focusable = [closeBtn, prevBtn, nextBtn, video].filter((b) => !b.hidden);
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
       if (event.shiftKey && document.activeElement === first) {

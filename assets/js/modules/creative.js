@@ -17,10 +17,13 @@ export function initCreative() {
       .map(
         (item, i) => `
         <figure class="gallery__item">
-          <button type="button" class="gallery__open" data-index="${i}"
-                  aria-label="View ${esc(item.title || 'render')} full screen">
+          <button type="button"
+                  class="gallery__open${item.fit === 'contain' ? ' gallery__open--contain' : ''}"
+                  data-index="${i}"
+                  aria-label="${item.video ? 'Play' : 'View'} ${esc(item.title || 'render')} full screen">
             <img src="${escUrl(item.src)}" alt="${esc(item.alt || item.title || '')}"
                  loading="lazy" decoding="async">
+            ${item.video ? '<span class="gallery__play" aria-hidden="true"></span>' : ''}
           </button>
           ${item.title || item.meta
             ? `<figcaption class="gallery__cap">

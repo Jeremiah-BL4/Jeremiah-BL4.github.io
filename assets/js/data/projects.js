@@ -267,7 +267,7 @@ export const projects = [
  * Every image gets the same size in an even grid; the caption sits under it.
  * ------------------------------------------------------------------------- */
 export const gallery = [
-  /* Scene files: https://github.com/x13-4zur3/blender-projects */
+  /* Scene files: https://github.com/Jeremiah-BL4/blender-projects */
   {
     src: 'assets/img/creative/black-hole.webp',
     alt: 'A black hole: a black event horizon with an orange accretion disk bent up over it and down under it by gravitational lensing, against faint stars',
@@ -291,6 +291,14 @@ export const gallery = [
     alt: 'The same temple from a low angle at the front, its layered roofs and hanging lanterns against a pale sky',
     title: 'Temple, low angle',
     meta: 'Built in Minecraft, rendered in Blender · 2025',
+  },
+  {
+    src: 'assets/img/creative/sword-in-the-stone.webp',
+    video: 'assets/video/sword-in-the-stone.mp4',
+    fit: 'contain',              // portrait render: show it whole, not cropped to 16:9
+    alt: 'A sword glowing blue-green, set in a rock in a cave and lit by a shaft of light. In the animation, lightning runs down the blade and a cloaked figure walks in beside it',
+    title: 'Sword in the Stone',
+    meta: 'Course project, animated with the course’s character and rock assets · Blender, EEVEE · 2025',
   },
 ];
 

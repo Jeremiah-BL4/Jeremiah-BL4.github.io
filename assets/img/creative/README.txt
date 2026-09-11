@@ -13,5 +13,9 @@ wide as WebP, under ~400KB each:
   ffmpeg -i render.png -vf scale=1600:-2:flags=lanczos -c:v libwebp -quality 82 render.webp
 
 black-hole, gem, temple and temple-low are rendered from the .blend files in
-https://github.com/x13-4zur3/blender-projects by the scripts in tools/blender/,
-which also say exactly what each render adds to its scene.
+https://github.com/Jeremiah-BL4/blender-projects by the scripts in
+tools/blender/, which also say exactly what each render adds to its scene.
+
+sword-in-the-stone.webp is the first frame of assets/video/sword-in-the-stone.mp4.
+A gallery item with `video` opens that file in the viewer instead of the image,
+and `fit: 'contain'` shows a non-16:9 image whole, on a dark ground.

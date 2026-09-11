@@ -1,12 +1,13 @@
 # Blender render scripts
 
 The Creative section's renders come from the `.blend` files in
-[x13-4zur3/blender-projects](https://github.com/x13-4zur3/blender-projects).
+[Jeremiah-BL4/blender-projects](https://github.com/Jeremiah-BL4/blender-projects),
+which also carries a copy of these scripts.
 These scripts set up each shot in memory and render it; they never save the
 `.blend`, so the originals stay as they are. Each script's docstring lists
 exactly what it adds or changes.
 
-Tested with Blender 5.2. Run from this folder, with `$P` as the unzipped repo:
+Tested with Blender 5.2. Run from this folder, with `$P` as a clone of that repo:
 
 ```bash
 blender -b "$P/BLACK HOLE/BLACK HOLE.blend" --python black_hole.py -- black-hole.png
@@ -30,3 +31,7 @@ ffmpeg -i temple.png -vf scale=1600:-2:flags=lanczos -c:v libwebp -quality 82 te
 ```
 
 The WebP files go in `assets/img/creative/`.
+
+Sword in the Stone isn't rendered by these scripts: the site shows your own
+render of it, `assets/video/sword-in-the-stone.mp4`, with its first frame as
+the cover image.
