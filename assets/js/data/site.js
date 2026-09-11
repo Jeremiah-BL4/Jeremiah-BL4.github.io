@@ -1,0 +1,43 @@
+/**
+ * SITE DATA
+ * ---------------------------------------------------------------------------
+ * Contact details and profile links. Nothing here is invented — any value
+ * still set to PLACEHOLDER is deliberately blank and is hidden from the page
+ * until you fill it in, so the site never shows a dead link or a false claim.
+ *
+ * Search this file for "PLACEHOLDER" to find everything that needs you.
+ *
+ * Note: hero, about, lab and toolkit copy lives directly in index.html rather
+ * than here. That copy is static HTML on purpose — it renders instantly, and
+ * search engines see it without running any JavaScript.
+ */
+
+/** Sentinel for "I don't have this yet". The render layer skips these. */
+export const PLACEHOLDER = 'REPLACE_ME';
+
+/** True when a value is real and safe to render. */
+export const isSet = (value) =>
+  typeof value === 'string' && value.length > 0 && !value.includes(PLACEHOLDER);
+
+export const site = {
+  name: 'Jeremiah Anthony',
+  role: 'Developer & Creative Technologist',
+
+  /* This is the address on your account. Swap it if you would rather publish a
+     dedicated contact address. */
+  email: 'jeremiahanthony876@gmail.com',
+
+  /* PLACEHOLDER — set to your city/country, or leave as-is to hide the row. */
+  location: PLACEHOLDER,
+
+  /* PLACEHOLDER — add real profile URLs. Rows containing PLACEHOLDER never
+     render, so no broken links go live. Delete any you don't use. */
+  socials: [
+    { key: 'github',   label: 'GitHub',   url: 'https://github.com/Jeremiah-BL4' },
+    { key: 'linkedin', label: 'LinkedIn', url: `https://linkedin.com/in/${PLACEHOLDER}` },
+    { key: 'x',        label: 'X',        url: `https://x.com/${PLACEHOLDER}` },
+  ],
+};
+
+/** Socials with the placeholders removed. */
+export const activeSocials = () => site.socials.filter((s) => isSet(s.url));

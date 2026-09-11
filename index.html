@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Jeremiah Anthony · Developer &amp; Creative Technologist</title>
+  <meta name="description" content="Jeremiah Anthony builds websites for businesses, works in Blender, writes Python, and is learning offensive security. Front-end development, client sites, 3D and experiments.">
+  <meta name="author" content="Jeremiah Anthony">
+  <meta name="theme-color" content="#f0e7d9">
+  <link rel="canonical" href="https://jeremiah-bl4.github.io/">
+
+  <!-- Open Graph / social preview. og-cover.png is a plain 1200x630 monogram
+       card; for a richer one, screenshot tools/og-template.html at 1200x630
+       and overwrite it. Preview images must be absolute URLs. -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jeremiah-bl4.github.io/">
+  <meta property="og:title" content="Jeremiah Anthony · Developer &amp; Creative Technologist">
+  <meta property="og:description" content="Websites for businesses, front-end development, Blender, Python, and a security lab in progress.">
+  <meta property="og:image" content="https://jeremiah-bl4.github.io/assets/img/og-cover.png">
+  <meta property="og:image:alt" content="JA monogram on a warm bone field">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Instrument+Sans:wght@400..700&family=Instrument+Serif:ital@1&display=swap">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+
+  <script type="module" src="assets/js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html" aria-label="Jeremiah Anthony, home">
+        <img src="assets/img/logo-light.webp" alt="" width="40" height="28">
+        <span>Jeremiah Anthony<small>Developer</small></span>
+      </a>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Main">
+        <ul class="nav__list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#clients">Client Sites</a></li>
+          <li><a href="#creative">Creative</a></li>
+          <li><a href="#lab">Lab</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <a class="btn btn--primary" href="#contact">Get in touch</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="btn btn--ghost btn--sm nav__cta" href="#contact">Get in touch</a>
+        <button class="nav__toggle" type="button" aria-expanded="false"
+                aria-controls="nav-menu" aria-label="Menu"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="shell">
+        <!-- macOS-style window framing the intro. The chrome is decoration;
+             everything inside it is ordinary page content. -->
+        <div class="window">
+          <div class="window__bar" aria-hidden="true">
+            <span class="window__lights"><i></i><i></i><i></i></span>
+            <span class="window__plus">+</span>
+          </div>
+
+          <div class="window__body">
+            <div class="hero__intro">
+              <h1>
+                I turn ideas into digital <em class="accent-text">experiences.</em>
+              </h1>
+
+              <p class="hero__lead">
+                I’m <strong>Jeremiah Anthony</strong>, a developer and creative technologist
+                building websites, interactive projects, and digital experiences. Alongside web
+                development, I&nbsp;work with Python, Blender, Linux, and cybersecurity, constantly
+                learning, experimenting, and building something new.
+              </p>
+
+              <div class="hero__actions">
+                <a class="btn btn--primary" href="#work">View my work</a>
+                <a class="btn btn--ghost" href="#contact">Contact me</a>
+              </div>
+            </div>
+
+            <a class="hero__scroll" href="#work" aria-label="Scroll to selected work">
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WORK ===================== -->
+    <section class="section" id="work">
+      <div class="shell">
+        <div class="section__head">
+          <h2 class="section__title">Selected work</h2>
+          <p class="section__lead">Projects I’ve designed and built.</p>
+        </div>
+
+        <div class="filters" id="work-filters" role="group" aria-label="Filter projects by category"></div>
+        <p class="visually-hidden" id="work-status" role="status" aria-live="polite"></p>
+
+        <div class="grid-work" id="work-grid">
+          <noscript>
+            <p class="empty-note">
+              The project list needs JavaScript to load. Email me and I’ll send it over.
+            </p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CLIENT SITES =====================
+         Removed automatically while there are no client projects. -->
+    <section class="section" id="clients">
+      <div class="shell">
+        <div class="section__head">
+          <h2 class="section__title">Websites I’ve built for businesses</h2>
+          <p class="section__lead">
+            Designed and built for real businesses, with a link to each live site and a
+            write-up of the work.
+          </p>
+        </div>
+
+        <div class="clients" id="clients-list"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CREATIVE =====================
+         Removed automatically while the gallery is empty. -->
+    <section class="section" id="creative">
+      <div class="shell">
+        <div class="section__head">
+          <h2 class="section__title">Creative &amp; 3D</h2>
+          <p class="section__lead">Modelling, lighting and rendering in Blender.</p>
+        </div>
+
+        <div class="gallery" id="creative-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== LAB ===================== -->
+    <section class="section" id="lab">
+      <div class="shell">
+        <div class="section__head">
+          <h2 class="section__title">The lab</h2>
+          <p class="section__lead">Security and systems, which I’m currently learning.</p>
+        </div>
+
+        <div class="lab">
+          <div class="lab__body">
+            <p>
+              I use Linux day to day and keep a Kali VM for practice. Most of it is
+              fundamentals: how networks route traffic, what a running service exposes,
+              and how to script repetitive work in Bash and Python.
+            </p>
+            <p>
+              It feeds back into the web work. Knowing how a form, a session or a header
+              can be abused makes it easier to build them properly.
+            </p>
+            <p class="lab__small">
+              I’m early in this and don’t do security work professionally. All practice
+              happens on my own machines or on platforms made for it.
+            </p>
+          </div>
+
+          <aside class="panel aside-list">
+            <h3>Currently studying</h3>
+            <ul>
+              <li>Linux fundamentals</li>
+              <li>Networking and TCP/IP</li>
+              <li>Bash scripting</li>
+              <li>Python for security</li>
+              <li>Web application basics</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="shell">
+        <div class="section__head">
+          <h2 class="section__title">About</h2>
+        </div>
+
+        <div class="about">
+          <div class="about__body">
+            <p>
+              I got into this the way a lot of people do: I wanted to change something on a
+              page, opened the code to see how it worked, and kept going.
+            </p>
+            <p>
+              Most of my time goes into front-end work: building sites that load fast, read
+              well on a phone and hold up when someone resizes the window. I like the part
+              where a business explains what they need and I turn it into something they
+              can use.
+            </p>
+            <p>
+              Outside of that I’m usually in Blender, writing a Python script to avoid doing
+              something twice, or in a VM working through security fundamentals. I use AI
+              tools as part of how I build, mainly for scaffolding and review, and I check
+              what they produce.
+            </p>
+          </div>
+
+          <aside class="panel aside-list">
+            <h3>Currently</h3>
+            <ul>
+              <li>Taking on freelance website builds for small businesses</li>
+              <li>Working through networking and Linux fundamentals</li>
+              <li>Getting deeper into React and modern front-end tooling</li>
+              <li>Rendering personal Blender projects between builds</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TOOLKIT ===================== -->
+    <section class="section" id="toolkit">
+      <div class="shell">
+        <div class="section__head">
+          <h2 class="section__title">Toolkit</h2>
+          <p class="section__lead">
+            <strong>Core</strong> is what I use daily, <strong>Working</strong> is what I can
+            build with, and <strong>Learning</strong> is in progress.
+          </p>
+        </div>
+
+        <div class="skills">
+          <div class="panel skillset">
+            <div class="skillset__head">
+              <h3>Development</h3>
+            </div>
+            <ul>
+              <li><img src="assets/img/tech/html.webp" alt="" width="24" height="24"><span>HTML</span><em>Core</em></li>
+              <li><img src="assets/img/tech/css.webp" alt="" width="24" height="24"><span>CSS</span><em>Core</em></li>
+              <li><img src="assets/img/tech/java-script.webp" alt="" width="24" height="24"><span>JavaScript</span><em>Core</em></li>
+              <li><img src="assets/img/tech/python.webp" alt="" width="24" height="24"><span>Python</span><em>Working</em></li>
+              <li><img src="assets/img/tech/react.webp" alt="" width="24" height="24"><span>React</span><em>Learning</em></li>
+              <li><img src="assets/img/tech/responsive-ui.webp" alt="" width="24" height="24"><span>Responsive &amp; accessible UI</span><em>Working</em></li>
+            </ul>
+          </div>
+
+          <div class="panel skillset">
+            <div class="skillset__head">
+              <h3>Tools &amp; systems</h3>
+            </div>
+            <ul>
+              <li><img src="assets/img/tech/git.webp" alt="" width="24" height="24"><span>Git</span><em>Working</em></li>
+              <li><img src="assets/img/tech/github.webp" alt="" width="24" height="24"><span>GitHub</span><em>Working</em></li>
+              <li><img src="assets/img/tech/vscode.webp" alt="" width="24" height="24"><span>VS Code</span><em>Core</em></li>
+              <li><img src="assets/img/tech/linux.webp" alt="" width="24" height="24"><span>Linux</span><em>Working</em></li>
+              <li><img src="assets/img/tech/kali.webp" alt="" width="24" height="24"><span>Kali Linux</span><em>Learning</em></li>
+              <li><img src="assets/img/tech/vm.webp" alt="" width="24" height="24"><span>Virtual machines</span><em>Working</em></li>
+              <li><img src="assets/img/tech/ai-dev.webp" alt="" width="24" height="24"><span>AI-assisted development</span><em>Working</em></li>
+            </ul>
+          </div>
+
+          <div class="panel skillset">
+            <div class="skillset__head">
+              <h3>Creative</h3>
+            </div>
+            <ul>
+              <li><img src="assets/img/tech/blender-icon.webp" alt="" width="24" height="24"><span>Blender</span><em>Working</em></li>
+              <li><img src="assets/img/tech/photoshop.webp" alt="" width="24" height="24"><span>Photoshop</span><em>Working</em></li>
+              <li><img src="assets/img/tech/ui-ux.webp" alt="" width="24" height="24"><span>UI / UX design</span><em>Working</em></li>
+              <li><img src="assets/img/tech/unity.webp" alt="" width="24" height="24"><span>Unity</span><em>Learning</em></li>
+              <li><img src="assets/img/tech/3d-modeling.webp" alt="" width="24" height="24"><span>3D modelling &amp; rendering</span><em>Working</em></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact">
+      <div class="shell contact">
+        <div>
+          <h2>Have a project in mind?<br><span class="accent-text">Let’s build it.</span></h2>
+          <p class="contact__lead">
+            Whether it’s a website for your business or something more experimental,
+            send me a message.
+          </p>
+          <p style="margin-top:var(--s-6)">
+            <a class="btn btn--primary" data-email href="#">Email me</a>
+          </p>
+        </div>
+
+        <div class="contact__links" id="contact-links"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/logo-dark.webp" alt="" width="53" height="36">
+          <strong>Jeremiah Anthony</strong>
+          <p>Developer and creative technologist.</p>
+        </div>
+
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#clients">Client sites</a></li>
+            <li><a href="#creative">Creative</a></li>
+            <li><a href="#lab">Lab</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Elsewhere</h4>
+          <ul id="footer-socials"></ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span data-year>2025</span> Jeremiah Anthony</p>
+        <p><a href="privacy.html">Privacy</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

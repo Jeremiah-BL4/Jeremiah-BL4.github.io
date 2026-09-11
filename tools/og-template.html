@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OG image template — 1200x630</title>
+  <!--
+    SOCIAL PREVIEW IMAGE
+    ------------------------------------------------------------------------
+    Open this file in a browser, screenshot the card below at exactly
+    1200 x 630, and overwrite:
+
+        assets/img/og-cover.png
+
+    index.html and project.html already point their og:image at that file,
+    so nothing else needs to change.
+
+    Easiest way to get an exact capture:
+      Chrome → F12 → Ctrl+Shift+M (device toolbar) → set 1200 x 630
+      → ⋮ menu → "Capture screenshot".
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&family=Instrument+Serif:ital@1&display=swap">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <style>
+    body { margin: 0; background: #3a352c; display: grid; place-items: center; min-height: 100vh; }
+
+    .card {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      padding: 84px 96px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--surface-0);
+      color: var(--fg);
+      font-family: var(--font-body);
+      overflow: hidden;
+    }
+    .card > * { position: relative; }
+
+    .top { display: flex; align-items: center; gap: 16px; }
+    .top img { width: 66px; height: 45px; object-fit: contain; }
+    .top span {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 650;
+      font-size: 84px;
+      line-height: 1.04;
+      letter-spacing: -0.042em;
+    }
+    h1 em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: inherit;
+    }
+    p.sub { margin: 26px 0 0; font-size: 25px; color: var(--fg-mid); max-width: 34ch; }
+
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--fg-dim);
+      letter-spacing: 0.02em;
+    }
+    .foot strong { color: var(--fg); font-weight: 500; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <img src="../assets/img/logo-dark.webp" alt="">
+      <span>Jeremiah Anthony</span>
+    </div>
+
+    <div>
+      <h1>I turn ideas into digital <em>experiences.</em></h1>
+      <p class="sub">Websites and interactive projects — plus Python, Blender, Linux and cybersecurity.</p>
+    </div>
+
+    <div class="foot">
+      <span><strong>Developer</strong> &amp; Creative Technologist</span>
+      <!-- Replace with your domain once you have one. -->
+      <span>portfolio</span>
+    </div>
+  </div>
+</body>
+</html>
