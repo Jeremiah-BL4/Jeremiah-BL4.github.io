@@ -171,8 +171,9 @@ the published site.
 1. **Real work.** Screenshots of client sites and projects, and Blender
    renders. This is the one thing the site can't fake and shouldn't.
 2. **`assets/js/data/site.js`**
-   - `socials`: your real GitHub / LinkedIn URLs. Delete any you don't use.
-   - `location`: your city/country, or leave it and the row stays hidden.
+   - `socials`: GitHub is set; LinkedIn is left out. X is a placeholder
+     and stays hidden until you add a real handle (or delete the row).
+   - `location`: set to Kampala, Uganda.
    - `email`: currently the address on your account.
 3. **`index.html`**
    - The **Toolkit** levels (`Core` / `Working` / `Learning`) are my

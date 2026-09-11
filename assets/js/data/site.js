@@ -27,14 +27,14 @@ export const site = {
      dedicated contact address. */
   email: 'jeremiahanthony876@gmail.com',
 
-  /* PLACEHOLDER — set to your city/country, or leave as-is to hide the row. */
-  location: PLACEHOLDER,
+  /* Shown as "Based in" in the contact section. Set to PLACEHOLDER to hide it. */
+  location: 'Kampala, Uganda',
 
-  /* PLACEHOLDER — add real profile URLs. Rows containing PLACEHOLDER never
-     render, so no broken links go live. Delete any you don't use. */
+  /* Profile links. Rows containing PLACEHOLDER never render, so no broken
+     links go live. To add LinkedIn later:
+       { key: 'linkedin', label: 'LinkedIn', url: 'https://linkedin.com/in/…' }, */
   socials: [
     { key: 'github',   label: 'GitHub',   url: 'https://github.com/Jeremiah-BL4' },
-    { key: 'linkedin', label: 'LinkedIn', url: `https://linkedin.com/in/${PLACEHOLDER}` },
     { key: 'x',        label: 'X',        url: `https://x.com/${PLACEHOLDER}` },
   ],
 };

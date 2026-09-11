@@ -402,7 +402,8 @@
 .contact__lead { margin-top: var(--s-4); color: var(--fg-mid); font-size: var(--t-lead); max-width: 46ch; }
 
 .contact__links { display: grid; gap: 0; border-top: 1px solid var(--line-strong); }
-.contact__links a {
+.contact__links a,
+.contact__row {
   display: grid;
   grid-template-columns: 6.5rem 1fr auto;
   align-items: center;

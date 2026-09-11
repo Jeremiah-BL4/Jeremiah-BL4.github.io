@@ -25,8 +25,7 @@ export function initProfile() {
 
     if (isSet(site.location)) {
       rows.push(`
-        <div style="display:grid;grid-template-columns:6.5rem 1fr auto;gap:var(--s-3);
-                    padding:var(--s-4) var(--s-2);border-bottom:1px solid var(--line)">
+        <div class="contact__row">
           <span class="k">Based in</span><span class="v">${esc(site.location)}</span><span></span>
         </div>`);
     }
