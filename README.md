@@ -13,6 +13,32 @@ which is already on your machine; `npm run dev:node` is the Node equivalent.
 Don't open `index.html` by double-clicking it. The pages use ES modules, which
 browsers only load over `http://`, not `file://`.
 
+## Publishing
+
+Live at **https://jeremiah-bl4.github.io/**, served by GitHub Pages from the
+`main` branch of `Jeremiah-BL4/Jeremiah-BL4.github.io`. Commit and push to
+`main` and the site republishes within a minute or two:
+
+```bash
+git add -A
+git commit -m "Describe the change"
+git push
+```
+
+Client sites live under the same address, each from its own repo:
+
+| Site | Address | Repo |
+|---|---|---|
+| Roast & Simmer | https://jeremiah-bl4.github.io/roast-and-simmer/ | `Jeremiah-BL4/roast-and-simmer` (served from its `gh-pages` branch) |
+
+Any repo you publish with GitHub Pages appears at
+`jeremiah-bl4.github.io/<repo-name>/`, so every client site you host this way
+sits inside your portfolio's address.
+
+GitHub Actions can't run on this account at the moment (GitHub reports a
+billing lock), which is why the sites deploy from branches rather than
+workflows. Branch deploys aren't affected.
+
 ---
 
 ## The look
@@ -131,12 +157,11 @@ the published site.
    - `location`: your city/country, or leave it and the row stays hidden.
    - `email`: currently the address on your account.
 3. **`index.html`**
-   - `og:url` / `<link rel="canonical">`: set once you have a domain.
    - The **Toolkit** levels (`Core` / `Working` / `Learning`) are my
      conservative guesses. Adjust them to what's true.
 4. **`privacy.html`**: accurate for the site as it is. Update it if you add
    analytics, a contact form, or anything else that collects data.
-5. **`robots.txt`**: uncomment the `Sitemap:` line once you have a domain.
+5. **`sitemap.xml`**: add a line for each new project page you publish.
 
 There's no terms-of-service page. A portfolio with no accounts, payments or
 user content doesn't need one. If you start selling services through the site,
