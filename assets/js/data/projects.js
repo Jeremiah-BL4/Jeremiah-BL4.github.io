@@ -129,8 +129,8 @@ export const projects = [
       'Gallery with a full-screen viewer; every image served in three or four sizes',
       'A single-file offline version that opens from a WhatsApp attachment',
     ],
+    // A preview copy of the site, hosted inside this portfolio (see README).
     liveUrl: 'https://jeremiah-bl4.github.io/roast-and-simmer/',
-    sourceUrl: 'https://github.com/Jeremiah-BL4/roast-and-simmer',
     cover: {
       src: 'assets/img/projects/roast-and-simmer/desktop.webp',
       alt: 'Roast & Simmer homepage: the garden at night under string lights, with the restaurant name and a Reserve a table button',
@@ -165,7 +165,7 @@ export const projects = [
       built:
         'A single-page site with no build step. The page moves through a day: it opens after dark, steps into daylight for the kitchen, and ends in the garden at night. Every call to action goes to WhatsApp, Instagram or TikTok. The copy uses only what the photographs show and the owner confirmed, so there are no invented dishes, prices, hours or reviews.',
       result:
-        'Live as a client preview, kept out of search results until the restaurant approves launch.',
+        'Running as a preview inside this portfolio, kept out of search results until the restaurant approves launch.',
     },
   },
   {

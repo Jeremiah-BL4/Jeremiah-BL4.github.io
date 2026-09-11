@@ -25,25 +25,33 @@ git commit -m "Describe the change"
 git push
 ```
 
-Client sites live under the same address, each from its own repo:
+Client sites run from this portfolio as previews. Each is a copy of the
+finished site in its own folder here; the source repos stay private.
 
-| Site | Address | Repo |
+| Site | Address | Copied from |
 |---|---|---|
-| Roast & Simmer | https://jeremiah-bl4.github.io/roast-and-simmer/ | `Jeremiah-BL4/roast-and-simmer` (served from its `gh-pages` branch) |
-| Sol Restaurant | https://jeremiah-bl4.github.io/sol-restaurant/ | built from the private `Jeremiah-BL4/sol-restaurant` into this repo's `sol-restaurant/` folder |
+| Roast & Simmer | https://jeremiah-bl4.github.io/roast-and-simmer/ | `site/` in the private `Jeremiah-BL4/roast-and-simmer` |
+| Sol Restaurant | https://jeremiah-bl4.github.io/sol-restaurant/ | `npm run build:portfolio` in the private `Jeremiah-BL4/sol-restaurant` |
 
-**Sol is a demo copy, not the restaurant's launched site.** Its source stays
-private; only the built files live here, with a `noindex` tag and without the
-guest-photo feature (that needs Sol's Node server). To update it after a change
-to Sol, run this in the Sol project, then commit and push this repo:
+**These are previews, not the restaurants' launched sites.** Both carry a
+`noindex` tag, so they're reachable through your portfolio but not listed in
+search results. Sol's preview leaves out the guest-photo feature, which needs
+Sol's own Node server.
+
+To update one after changing it, refresh its folder here, then commit and push
+this repo:
 
 ```bash
+# Roast & Simmer: a plain static site, so copy it across
+rm -rf roast-and-simmer && cp -r "C:/Users/User/Pictures/Client Websites/Roast & Simmer/site" roast-and-simmer
+
+# Sol Restaurant: run in the Sol project
 npm run build:portfolio -- "C:/Users/User/Documents/Portfolio website/sol-restaurant"
 ```
 
-Any repo you publish with GitHub Pages appears at
-`jeremiah-bl4.github.io/<repo-name>/`, so every client site you host this way
-sits inside your portfolio's address.
+Don't turn on GitHub Pages in a repo named `roast-and-simmer` or
+`sol-restaurant`: a repo's own Pages site takes priority over a folder of the
+same name here, and would replace the preview.
 
 GitHub Actions can't run on this account at the moment (GitHub reports a
 billing lock), which is why the sites deploy from branches rather than
