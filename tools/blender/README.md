@@ -32,6 +32,20 @@ ffmpeg -i temple.png -vf scale=1600:-2:flags=lanczos -c:v libwebp -quality 82 te
 
 The WebP files go in `assets/img/creative/`.
 
-Sword in the Stone isn't rendered by these scripts: the site shows your own
-render of it, `assets/video/sword-in-the-stone.mp4`, with its first frame as
-the cover image.
+## Sword in the Stone
+
+The final render is your own, `assets/video/sword-in-the-stone.mp4`. The three
+preview stills beside it come from `sword_breakdown.py`, run on the course
+project's files (they aren't in the blender-projects repo):
+
+```bash
+S="Sword in the Stone files/SwordInTheStone4_FinalProject/SwordInTheStone4_FinalProject"
+blender -b "$S/Sword Final.blend" --python sword_breakdown.py -- model.png model
+blender -b "$S/Still Frame.blend" --python sword_breakdown.py -- clay.png clay
+blender -b "$S/Still Frame.blend" --python sword_breakdown.py -- lighting.png lighting
+
+ffmpeg -i model.png -vf scale=1600:-2:flags=lanczos -c:v libwebp -quality 84 model.webp
+ffmpeg -i clay.png -c:v libwebp -quality 84 clay.webp        # and lighting the same
+```
+
+They go in `assets/img/creative/sword/`.

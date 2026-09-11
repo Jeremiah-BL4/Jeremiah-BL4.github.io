@@ -292,13 +292,46 @@ export const gallery = [
     title: 'Temple, low angle',
     meta: 'Built in Minecraft, rendered in Blender · 2025',
   },
+];
+
+/* ---------------------------------------------------------------------------
+ * BREAKDOWNS: one piece shown from 3D preview to final render, under the
+ * gallery. `final` is the finished animation; `steps` are stills from the
+ * scene on the way there, in order, and open full screen when clicked.
+ * ------------------------------------------------------------------------- */
+export const breakdowns = [
   {
-    src: 'assets/img/creative/sword-in-the-stone.webp',
-    video: 'assets/video/sword-in-the-stone.mp4',
-    fit: 'contain',              // portrait render: show it whole, not cropped to 16:9
-    alt: 'A sword glowing blue-green, set in a rock in a cave and lit by a shaft of light. In the animation, lightning runs down the blade and a cloaked figure walks in beside it',
+    id: 'sword-in-the-stone',
     title: 'Sword in the Stone',
     meta: 'Course project, animated with the course’s character and rock assets · Blender, EEVEE · 2025',
+    final: {
+      video: 'assets/video/sword-in-the-stone.mp4',
+      poster: 'assets/img/creative/sword/final-poster.webp',
+      label: 'Final render',
+      note: 'The finished 3-second animation',
+      alt: 'A sword glowing blue-green, set in a rock in a cave and lit by a shaft of light. Lightning runs down the blade and a cloaked figure walks in beside it',
+    },
+    steps: [
+      {
+        src: 'assets/img/creative/sword/model.webp',
+        label: 'Sword model',
+        note: 'The sword on its own, under studio lights',
+        alt: 'The sword lying diagonally on a dark background: a long scratched blade with glowing runes down its centre, a swept guard and a leather-wrapped grip',
+        wide: true,
+      },
+      {
+        src: 'assets/img/creative/sword/clay.webp',
+        label: 'Clay',
+        note: 'The shot’s models in one plain material',
+        alt: 'The final shot in plain grey: the sword standing in a rock on a stepped stone base, in front of a wall of rocks',
+      },
+      {
+        src: 'assets/img/creative/sword/lighting.webp',
+        label: 'Lighting',
+        note: 'The scene’s own lights and light rays, before textures',
+        alt: 'The same shot in plain grey materials, lit warm from the upper right with a shaft of light falling across the sword',
+      },
+    ],
   },
 ];
 

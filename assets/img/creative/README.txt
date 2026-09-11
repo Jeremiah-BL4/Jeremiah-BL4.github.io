@@ -16,6 +16,7 @@ black-hole, gem, temple and temple-low are rendered from the .blend files in
 https://github.com/Jeremiah-BL4/blender-projects by the scripts in
 tools/blender/, which also say exactly what each render adds to its scene.
 
-sword-in-the-stone.webp is the first frame of assets/video/sword-in-the-stone.mp4.
-A gallery item with `video` opens that file in the viewer instead of the image,
-and `fit: 'contain'` shows a non-16:9 image whole, on a dark ground.
+sword/ holds the Sword in the Stone breakdown, listed in `breakdowns` in the
+same file: model, clay and lighting come from tools/blender/sword_breakdown.py,
+and final-poster.webp is the first frame of the final render,
+assets/video/sword-in-the-stone.mp4.
