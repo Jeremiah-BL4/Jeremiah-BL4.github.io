@@ -140,8 +140,10 @@ businesses** section, with a browser mockup, instead of the main grid.
 ### Blender renders
 
 Add images to `assets/img/creative/`, then list them in the `gallery` array in
-the same file. They show in an even grid with the caption underneath, and
-open full screen when clicked.
+the same file. They show in an even 16:9 grid with the caption underneath, and
+open full screen when clicked. The current renders come from the scripts in
+`tools/blender/`, which document the camera, lighting and other staging each
+one adds.
 
 ### Empty sections hide themselves
 
@@ -202,6 +204,7 @@ robots.txt
 tools/
   og-template.html    Screenshot this at 1200x630 for the social preview.
   source/             Unoptimised originals. Nothing on the site links here.
+  blender/            Scripts that render the Creative section from the .blend files.
 assets/
   css/
     tokens.css        Colour, type, space, motion. Change the site from here.

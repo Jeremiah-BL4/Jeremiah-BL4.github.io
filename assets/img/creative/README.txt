@@ -12,7 +12,6 @@ wide as WebP, under ~400KB each:
 
   ffmpeg -i render.png -vf scale=1600:-2:flags=lanczos -c:v libwebp -quality 82 render.webp
 
-The .blend files for black-hole, gem and temple are in
-https://github.com/x13-4zur3/blender-projects. The temple file has no camera
-framed on the building, so its two renders use a camera and sun added at
-render time (the .blend itself was not changed).
+black-hole, gem, temple and temple-low are rendered from the .blend files in
+https://github.com/x13-4zur3/blender-projects by the scripts in tools/blender/,
+which also say exactly what each render adds to its scene.

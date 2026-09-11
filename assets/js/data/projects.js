@@ -270,25 +270,25 @@ export const gallery = [
   /* Scene files: https://github.com/x13-4zur3/blender-projects */
   {
     src: 'assets/img/creative/black-hole.webp',
-    alt: 'A black hole study in black and white: a checkerboard disk bent up and over a central sphere by the lensing',
+    alt: 'A black hole: a black event horizon with an orange accretion disk bent up over it and down under it by gravitational lensing, against faint stars',
     title: 'Black Hole',
-    meta: 'Lensing study, faked with a refraction shader · Blender, Cycles · 2025',
+    meta: 'Gravitational lensing faked with nested refraction shells · Blender, Cycles · 2025',
   },
   {
     src: 'assets/img/creative/gem.webp',
-    alt: 'A faceted blue crystal glowing against a black background',
+    alt: 'A faceted blue and violet crystal floating above a dark glossy floor that reflects it',
     title: 'Gem',
     meta: 'Procedural crystal material · Blender, EEVEE · 2025',
   },
   {
     src: 'assets/img/creative/temple.webp',
-    alt: 'A two-tier temple of grey stone blocks with curved roofs, on a square stone base with lanterns at the corners',
+    alt: 'A two-tier temple of grey stone blocks with curved roofs on a square stone base, lit by a low sun that throws its shadow across the ground',
     title: 'Temple',
     meta: 'Built in Minecraft, rendered in Blender · 2025',
   },
   {
     src: 'assets/img/creative/temple-low.webp',
-    alt: 'The same temple from a low angle at the front, showing its layered roofs and hanging lanterns',
+    alt: 'The same temple from a low angle at the front, its layered roofs and hanging lanterns against a pale sky',
     title: 'Temple, low angle',
     meta: 'Built in Minecraft, rendered in Blender · 2025',
   },
