@@ -36,10 +36,14 @@ export function createLightbox() {
     const item = items[index];
     img.src = escUrl(item.src);
     img.alt = item.alt || item.title || '';
-    cap.innerHTML = item.title
-      ? `<strong>${esc(item.title)}</strong>${item.meta ? ` — ${esc(item.meta)}` : ''}
-         <span class="label" style="margin-left:.6rem">${index + 1} / ${items.length}</span>`
+    /* Gallery renders have title + meta; case-study screenshots have caption. */
+    const text = item.title
+      ? `<strong>${esc(item.title)}</strong>${item.meta ? ` · ${esc(item.meta)}` : ''}`
+      : esc(item.caption || '');
+    const count = items.length > 1
+      ? `<span class="label" style="margin-left:.6rem">${index + 1} / ${items.length}</span>`
       : '';
+    cap.innerHTML = text + count;
     const solo = items.length < 2;
     prevBtn.hidden = solo;
     nextBtn.hidden = solo;

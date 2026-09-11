@@ -327,12 +327,13 @@
   overflow: hidden;
   background: var(--surface-3);
   cursor: zoom-in;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
 }
 .gallery__open img { width: 100%; height: 100%; object-fit: cover; }
 .gallery__cap { margin-top: var(--s-3); font-size: var(--t-sm); }
 .gallery__cap strong { font-weight: 600; }
 .gallery__cap span { display: block; color: var(--fg-dim); }
+.gallery__source { margin: var(--s-6) 0 0; font-size: var(--t-sm); }
 
 /* ---- Lightbox ---------------------------------------------------------- */
 .lightbox {

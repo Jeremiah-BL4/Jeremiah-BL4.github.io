@@ -267,12 +267,31 @@ export const projects = [
  * Every image gets the same size in an even grid; the caption sits under it.
  * ------------------------------------------------------------------------- */
 export const gallery = [
-  // {
-  //   src: 'assets/img/creative/render-01.jpg',
-  //   alt: 'Describe the render for screen readers',
-  //   title: 'Scene name',
-  //   meta: 'Blender · Cycles · 2026',
-  // },
+  /* Scene files: https://github.com/x13-4zur3/blender-projects */
+  {
+    src: 'assets/img/creative/black-hole.webp',
+    alt: 'A black hole study in black and white: a checkerboard disk bent up and over a central sphere by the lensing',
+    title: 'Black Hole',
+    meta: 'Lensing study, faked with a refraction shader · Blender, Cycles · 2025',
+  },
+  {
+    src: 'assets/img/creative/gem.webp',
+    alt: 'A faceted blue crystal glowing against a black background',
+    title: 'Gem',
+    meta: 'Procedural crystal material · Blender, EEVEE · 2025',
+  },
+  {
+    src: 'assets/img/creative/temple.webp',
+    alt: 'A two-tier temple of grey stone blocks with curved roofs, on a square stone base with lanterns at the corners',
+    title: 'Temple',
+    meta: 'Built in Minecraft, rendered in Blender · 2025',
+  },
+  {
+    src: 'assets/img/creative/temple-low.webp',
+    alt: 'The same temple from a low angle at the front, showing its layered roofs and hanging lanterns',
+    title: 'Temple, low angle',
+    meta: 'Built in Minecraft, rendered in Blender · 2025',
+  },
 ];
 
 /* ---------------------------------------------------------------------------
