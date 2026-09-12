@@ -284,6 +284,9 @@
   align-items: center;
 }
 .client:nth-child(even) .client__visual { order: 2; }
+/* Grid items default to min-width:auto, so the mockup's no-wrap URL text
+   would hold the column open and push the page wider than a phone screen. */
+.client__visual { min-width: 0; }
 @media (max-width: 900px) {
   .client { grid-template-columns: 1fr; gap: var(--s-5); }
   .client:nth-child(even) .client__visual { order: 0; }
