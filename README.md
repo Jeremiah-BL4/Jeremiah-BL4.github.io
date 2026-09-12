@@ -15,7 +15,7 @@ browsers only load over `http://`, not `file://`.
 
 ## Publishing
 
-Live at **https://jeremiah-bl4.github.io/**, served by GitHub Pages from the
+Live at **https://jeremiahanthony.is-a.dev/**, served by GitHub Pages from the
 `main` branch of `Jeremiah-BL4/Jeremiah-BL4.github.io`. Commit and push to
 `main` and the site republishes within a minute or two:
 
@@ -30,8 +30,8 @@ finished site in its own folder here; the source repos stay private.
 
 | Site | Address | Copied from |
 |---|---|---|
-| Roast & Simmer | https://jeremiah-bl4.github.io/roast-and-simmer/ | `site/` in the private `Jeremiah-BL4/roast-and-simmer` |
-| Sol Restaurant | https://jeremiah-bl4.github.io/sol-restaurant/ | `npm run build:portfolio` in the private `Jeremiah-BL4/sol-restaurant` |
+| Roast & Simmer | https://jeremiahanthony.is-a.dev/roast-and-simmer/ | `site/` in the private `Jeremiah-BL4/roast-and-simmer` |
+| Sol Restaurant | https://jeremiahanthony.is-a.dev/sol-restaurant/ | `npm run build:portfolio` in the private `Jeremiah-BL4/sol-restaurant` |
 
 **These are previews, not the restaurants' launched sites.** Both carry a
 `noindex` tag, so they're reachable through your portfolio but not listed in

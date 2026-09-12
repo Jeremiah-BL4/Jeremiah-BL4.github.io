@@ -130,7 +130,7 @@ export const projects = [
       'A single-file offline version that opens from a WhatsApp attachment',
     ],
     // A preview copy of the site, hosted inside this portfolio (see README).
-    liveUrl: 'https://jeremiah-bl4.github.io/roast-and-simmer/',
+    liveUrl: 'https://jeremiahanthony.is-a.dev/roast-and-simmer/',
     cover: {
       src: 'assets/img/projects/roast-and-simmer/desktop.webp',
       alt: 'Roast & Simmer homepage: the garden at night under string lights, with the restaurant name and a Reserve a table button',
@@ -189,7 +189,7 @@ export const projects = [
     ],
     // A demo copy of the site, built from the private repo and hosted inside
     // this portfolio (see README: "Publishing").
-    liveUrl: 'https://jeremiah-bl4.github.io/sol-restaurant/',
+    liveUrl: 'https://jeremiahanthony.is-a.dev/sol-restaurant/',
     cover: {
       src: 'assets/img/projects/sol-restaurant/desktop.webp',
       alt: 'Sol Restaurant homepage: the covered terrace and garden, with the headline Steak, smoke and a garden to sit in',
